@@ -46,10 +46,34 @@ Content-Type: application/json
 }
 
 ### Buscar academias pelo nome/termo (página 1)
-POST http://localhost:3000/gyms/search
+GET http://localhost:3000/gyms/nearby?latitude=-10.912345&longitude=-37.070123
 Content-Type: application/json
 
+### Buscar academias por termo (página 1)
+GET http://localhost:3000/gyms/search?q=Central&page=1
+Content-Type: application/json
+
+### Criar um check-in
+POST http://localhost:3000/check-ins/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+Authorization: Bearer <SEU_TOKEN>
+
 {
-    "q": "Central",
-    "page": 1
+    "latitude": -10.912345,
+    "longitude": -37.070123
 }
+
+### Histórico de check-ins do usuário (página 1)
+GET http://localhost:3000/check-ins/history?page=1
+Content-Type: application/json
+Authorization: Bearer <SEU_TOKEN>
+
+### Métricas do usuário (quantidade de check-ins)
+GET http://localhost:3000/check-ins/metrics
+Content-Type: application/json
+Authorization: Bearer <SEU_TOKEN>
+
+### Validar um check-in
+PATCH http://localhost:3000/check-ins/validate/123e4567-e89b-12d3-a456-426614174000
+Content-Type: application/json
+Authorization: Bearer <SEU_TOKEN>
