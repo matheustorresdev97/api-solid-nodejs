@@ -18,3 +18,7 @@ Content-Type: application/json
 }
 
 ### 
+
+GET http://localhost:3333/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmYWVhMWM5My1mMTcyLTQ4YmMtYjE4My05Mzc5ZGFlYjg4NjYiLCJpYXQiOjE3NTk3ODg0Njh9.ChrzjCweBD_f5kD5tRQC223vhYsDxFh5k0OoFOija80
